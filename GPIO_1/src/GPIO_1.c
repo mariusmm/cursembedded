@@ -3,7 +3,6 @@
 #include "em_gpio.h"
 #include "em_cmu.h"
 
-/* PD7 */
 
 int main(void)
 {
@@ -27,9 +26,5 @@ int main(void)
 	  if (GPIO_PinInGet(gpioPortB, 11) == 0) {
 		  GPIO_PinOutSet(gpioPortD, 7);
 	  }
-
-
-
-
   }
 }
