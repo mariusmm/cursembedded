@@ -48,8 +48,9 @@ void setupSWOForPrint(void)
 int _write(int file, const char *ptr, int len)
 {
     int x;
-    for (x = 0; x < len; x++)
-    ITM_SendChar (*ptr++);
+    for (x = 0; x < len; x++) {
+    	ITM_SendChar (*ptr++);
+    }
     return (len);
 }
 
