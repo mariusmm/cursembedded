@@ -1,30 +1,20 @@
 /**
  ******************************************************************************
- * @file    main.c
+ * @file    BSP.h
  * @author  Màrius Montón <marius.monton@gmail.com>
  * @version V1.0
  * @date    05-July-2017
- * @brief   Use of printf with SWO example
+ * @brief   Basic BSP enabling pritnf
  * @license This project is released under the GNU Public License.s
  * ******************************************************************************
  */
-
-#include<stdio.h>
+#ifndef BSP_H_
+#define BSP_H_
 
 #include "em_device.h"
 #include "em_chip.h"
 
-#include "BSP.h"
+void setupSWOForPrint(void);
 
-int main(void)
-{
-  /* Chip errata */
-  CHIP_Init();
 
-  setupSWOForPrint();
-
-  /* Infinite loop */
-  while (1) {
-	  printf("hello world\n");
-  }
-}
+#endif /* BSP_H_ */
