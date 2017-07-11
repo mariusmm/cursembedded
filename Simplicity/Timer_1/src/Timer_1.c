@@ -19,7 +19,7 @@
 
 TIMER_Init_TypeDef timerInit =
   {
-    .enable     = true,
+    .enable     = false,
     .debugRun   = false,
     .prescale   = timerPrescale1024,
     .clkSel     = timerClkSelHFPerClk,
@@ -50,18 +50,23 @@ int main(void)
   /* Switch off LED */
   GPIO_PinOutClear(gpioPortD, 7);
 
+  /* configure TImer */
+  TIMER_Init(TIMER0, &timerInit);
+
   /* Infinite loop */
   while (1) {
 
 	  /* If user push button 0, start timer 0 */
 	  if (GPIO_PinInGet(gpioPortD, 8) == 0) {
-		  TIMER_Init(TIMER0, &timerInit);
+		  TIMER_CounterSet(TIMER0, 0);
+		  TIMER_Enable(TIMER0, true);
 	  }
 
 	  /* If timer count gets to TOP_VALUE, toggle LED and stop Timer */
 	  if (TIMER_CounterGet(TIMER0) >= TOP_VALUE) {
 		  GPIO_PinOutToggle(gpioPortD, 7);
-		  TIMER_Reset(TIMER0);
+		  TIMER_Enable(TIMER0, false);
+		  TIMER_CounterSet(TIMER0, 0);
 	  }
   }
 }
