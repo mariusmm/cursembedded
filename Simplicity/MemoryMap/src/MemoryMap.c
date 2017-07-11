@@ -1,3 +1,14 @@
+/**
+ ******************************************************************************
+ * @file    MemoryMap.c
+ * @author  Màrius Montón <marius.monton@gmail.com>
+ * @version V1.0
+ * @date    05-July-2017
+ * @brief   Memory map example
+ * @license This project is released under the GNU Public License.s
+ * ******************************************************************************
+ */
+
 #include "em_device.h"
 #include "em_chip.h"
 

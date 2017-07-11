@@ -1,3 +1,14 @@
+/**
+ ******************************************************************************
+ * @file    ADC_1.c
+ * @author  Màrius Montón <marius.monton@gmail.com>
+ * @version V1.0
+ * @date    05-July-2017
+ * @brief   ADC example
+ * @license This project is released under the GNU Public License.s
+ * ******************************************************************************
+ */
+
 #include "em_device.h"
 #include "em_chip.h"
 #include "em_gpio.h"
@@ -24,6 +35,7 @@ int main(void) {
 	GPIO_PinModeSet(gpioPortD, 7, gpioModePushPullDrive, 0); /* LED */
 	GPIO_PinModeSet(gpioPortS, 6, gpioModeInput, 0); /* Excite */
 //	GPIO_PinModeSet(gpioPortB, 11, gpioModeInput, 0); /* Boto 1 */
+
 
 	/* Infinite loop */
 	while (1) {
