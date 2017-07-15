@@ -1,3 +1,4 @@
 # Curs Embedded
 
-Curs a https://sistemesncastats.wordpress.com
+Curs a http://sistemesencastats.wordpress.com
+
