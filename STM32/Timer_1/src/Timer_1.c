@@ -4,7 +4,8 @@
  * @author  Màrius Montón
  * @version V1.0
  * @date    15-July-2017
- * @brief
+ * @brief 	Basic Timer management
+ * @license This project is released under the GNU Public License.
  ******************************************************************************
  */
 

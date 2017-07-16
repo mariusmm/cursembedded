@@ -1,10 +1,11 @@
 /**
  ******************************************************************************
- * @file    main.c
- * @author  Ac6
+ * @file    GPIO_2.c
+ * @author  Màrius Montón
  * @version V1.0
- * @date    01-December-2013
- * @brief   Default main function.
+ * @date    15-July-2017
+ * @brief 	GPIO with IRQ example
+ * @license This project is released under the GNU Public License.
  ******************************************************************************
  */
 

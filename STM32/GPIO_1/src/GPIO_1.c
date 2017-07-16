@@ -1,12 +1,13 @@
 /**
-  ******************************************************************************
-  * @file    main.c
-  * @author  Ac6
-  * @version V1.0
-  * @date    01-December-2013
-  * @brief   Default main function.
-  ******************************************************************************
-*/
+ ******************************************************************************
+ * @file    GPIO_1.c
+ * @author  Màrius Montón
+ * @version V1.0
+ * @date    15-July-2017
+ * @brief 	Basic GPIO management
+ * @license This project is released under the GNU Public License.
+ ******************************************************************************
+ */
 
 
 #include "stm32f4xx.h"
