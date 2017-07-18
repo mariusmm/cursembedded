@@ -27,7 +27,6 @@ TIM_OC_InitTypeDef configOC;
 TIM_MasterConfigTypeDef sMasterConfig;
 
 void EXTI0_IRQHandler() {
-	HAL_NVIC_ClearPendingIRQ(EXTI0_IRQn);
 
 	if (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0) == 1) {
 		/* We can be increasing or decreasing duty cycle */
@@ -50,6 +49,8 @@ void EXTI0_IRQHandler() {
 	configOC.Pulse = duty_cycle;
 	HAL_TIM_PWM_ConfigChannel(&htim, &configOC, TIM_CHANNEL_1);
 	HAL_TIM_PWM_Start(&htim, TIM_CHANNEL_1);
+
+	HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_0);
 }
 
 int main(void) {

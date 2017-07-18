@@ -14,13 +14,13 @@
 
 void EXTI0_IRQHandler() {
 
-	HAL_NVIC_ClearPendingIRQ(EXTI0_IRQn);
-
 	if (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0) == 1) {
 		HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12, GPIO_PIN_SET);
 	} else {
 		HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12, GPIO_PIN_RESET);
 	}
+
+	HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_0);
 }
 
 int main(void) {
