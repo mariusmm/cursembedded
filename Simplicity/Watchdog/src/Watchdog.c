@@ -55,11 +55,10 @@ int main(void) {
 	RMU_ResetCauseClear();
 
 	CMU_ClockEnable(cmuClock_GPIO, true);
-	CMU_ClockEnable(cmuClock_CORELE, true);
+	CMU_ClockEnable(cmuClock_HFLE, true);
 
 	GPIO_PinModeSet(gpioPortD, 7, gpioModePushPullDrive, 0); /* LED */
 	GPIO_PinModeSet(gpioPortD, 8, gpioModeInput, 0); /* Boto 0 */
-	GPIO_PinModeSet(gpioPortB, 11, gpioModeInput, 0); /* Boto 1 */
 
 	/* Set Interrupt configuration for both buttons */
 	GPIO_IntConfig(gpioPortD, 8, false, true, true);
