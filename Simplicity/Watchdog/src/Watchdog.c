@@ -54,6 +54,12 @@ int main(void) {
 	resetCause = RMU_ResetCauseGet();
 	RMU_ResetCauseClear();
 
+	if (resetCause & RMU_RSTCAUSE_WDOGRST) {
+		resetbyWatchdog = true;
+	} else {
+		resetbyWatchdog = false;
+	}
+
 	CMU_ClockEnable(cmuClock_GPIO, true);
 	CMU_ClockEnable(cmuClock_HFLE, true);
 
@@ -68,12 +74,6 @@ int main(void) {
 
 	/* Enable watchdog */
 	WDOG_Init(&init);
-
-	if (resetCause & RMU_RSTCAUSE_WDOGRST) {
-		resetbyWatchdog = true;
-	} else {
-		resetbyWatchdog = false;
-	}
 
 	/* Infinite loop */
 	while (1) {
