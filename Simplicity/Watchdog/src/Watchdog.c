@@ -31,21 +31,21 @@ void GPIO_EVEN_IRQHandler(void) {
 	WDOG_Feed();
 }
 
-WDOG_Init_TypeDef init = {
-	.enable = true, /* Start watchdog when init done */
-	.debugRun = false, /* WDOG not counting during debug halt */
-	.em2Run = true, /* WDOG counting when in EM2 */
-	.em3Run = true, /* WDOG counting when in EM3 */
-	.em4Block = false, /* EM4 can be entered */
-	.swoscBlock = false, /* Do not block disabling LFRCO/LFXO in CMU */
-	.lock = false, /* Do not lock WDOG configuration (if locked, reset needed to unlock) */
-	.clkSel = wdogClkSelULFRCO, /* Select 1kHZ WDOG oscillator */
-	.perSel = wdogPeriod_4k, /* Set the watchdog period to 2049 clock periods (ie ~4 seconds)*/
+WDOG_Init_TypeDef init = { .enable = true, /* Start watchdog when init done */
+.debugRun = false, /* WDOG not counting during debug halt */
+.em2Run = true, /* WDOG counting when in EM2 */
+.em3Run = true, /* WDOG counting when in EM3 */
+.em4Block = false, /* EM4 can be entered */
+.swoscBlock = false, /* Do not block disabling LFRCO/LFXO in CMU */
+.lock = false, /* Do not lock WDOG configuration (if locked, reset needed to unlock) */
+.clkSel = wdogClkSelULFRCO, /* Select 1kHZ WDOG oscillator */
+.perSel = wdogPeriod_4k, /* Set the watchdog period to 2049 clock periods (ie ~4 seconds)*/
 };
 
 int main(void) {
 	volatile uint32_t i;
 	uint32_t resetCause;
+	bool resetbyWatchdog;
 
 	/* Chip errata */
 	CHIP_Init();
@@ -69,10 +69,16 @@ int main(void) {
 	/* Enable watchdog */
 	WDOG_Init(&init);
 
+	if (resetCause & RMU_RSTCAUSE_WDOGRST) {
+		resetbyWatchdog = true;
+	} else {
+		resetbyWatchdog = false;
+	}
+
 	/* Infinite loop */
 	while (1) {
 
-		if (resetCause & RMU_RSTCAUSE_WDOGRST) {
+		if (resetbyWatchdog == true) {
 			GPIO_PinOutSet(gpioPortD, 7);
 		} else {
 			/* Blink LED */
