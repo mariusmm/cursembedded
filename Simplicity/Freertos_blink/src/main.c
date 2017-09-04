@@ -5,7 +5,7 @@
  * @version V1.0
  * @date    24-July-2017
  * @brief   Basic FreeRTOS example
- * @license This project is released under the GNU Public License.s
+ * @license This project is released under the GNU Public License.
  * ******************************************************************************
  */
 
