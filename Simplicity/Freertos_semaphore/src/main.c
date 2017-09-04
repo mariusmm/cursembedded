@@ -5,7 +5,7 @@
  * @version V1.0
  * @date    25-July-2017
  * @brief   Basic FreeRTOS Semaphore example
- * @license This project is released under the GNU Public License.s
+ * @license This project is released under the GNU Public License.
  *
  * ******************************************************************************
  */
@@ -40,9 +40,6 @@
 /** @brief binary semaphore for button 0 */
 SemaphoreHandle_t semaphore_button_0;
 
-/** @brief binary semaphore for button 0 */
-SemaphoreHandle_t semaphore_button_1;
-
 /**
  * @brief Button 0 ISR
  *
@@ -65,7 +62,7 @@ void GPIO_EVEN_IRQHandler(void) {
 /**
  * @brief Button 1 ISR
  *
- * Gives corresponding binary semaphore every time it enters
+ *
  */
 void GPIO_ODD_IRQHandler(void) {
 	uint32_t aux;
@@ -75,10 +72,7 @@ void GPIO_ODD_IRQHandler(void) {
 	aux = GPIO_IntGet();
 	GPIO_IntClear(aux);
 
-	/* Toggle semaphore */
-	xSemaphoreGiveFromISR(semaphore_button_1, &xHigherPriorityTaskWoken);
-
-	portEND_SWITCHING_ISR(xHigherPriorityTaskWoken);
+	/* nothing to do */
 }
 
 /**
@@ -118,7 +112,6 @@ int main(void) {
 
 	/* Create semaphores */
 	semaphore_button_0 = xSemaphoreCreateBinary();
-	semaphore_button_1 = xSemaphoreCreateBinary();
 
 	/* Create our first task */
 	xTaskCreate(TaskLedToggle, (const char *) "LedToggle",
@@ -144,7 +137,6 @@ int main(void) {
  *
  * The task is trying to "take" the binary semaphore and when it does,
  * just toggles the led
- *
  *
  *
  * This project uses the following libraries:
