@@ -8,7 +8,11 @@
  * @license This project is released under the GNU Public License.
  *
  * Using USART1 #1 on PD0 (TX) & PD1 (RX) on Expansion header pins 4 & 6.
- * Serial port parameters ara: 115200 bps, 8 databits, no parity, 1 stop bit
+ * Serial port parameters ara: 115200 bps, 8 databits, no parity, 1 stop bit.
+ *
+ * When user push button 0 (1), a character is sent using USART1
+ * (character 'A' or 'B').
+ *
  * ******************************************************************************
  */
 
