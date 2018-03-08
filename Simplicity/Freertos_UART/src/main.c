@@ -3,9 +3,12 @@
  * @file    main.c
  * @author  Màrius Montón <marius.monton@gmail.com>
  * @version V1.0
- * @date    25-July-2017
- * @brief   Basic FreeRTOS Queue example
+ * @date    8-March-2018
+ * @brief   USART & FreeRTOS example
  * @license This project is released under the GNU Public License.s
+ *
+ * Same example as USART_2 using FreeRTOS and queues instead of
+ * a circular buffer.
  *
  * ******************************************************************************
  */
@@ -96,11 +99,12 @@ static void UARTTAsk(void *pParameter) {
 		/* try to get new delay time from queue */
 		if (xQueueReceive(USART_RX_queue, &recv_char, portMAX_DELAY)) {
 			tx_char = recv_char;
-			tx_char++;
 			xQueueSend(USART_TX_queue, &tx_char, 0);
 			tx_char++;
 			xQueueSend(USART_TX_queue, &tx_char, 0);
-			USART_Tx(USART1, recv_char);
+			tx_char++;
+			xQueueSend(USART_TX_queue, &tx_char, 0);
+			USART_Send(USART1);
 		}
 	}
 }
@@ -172,7 +176,6 @@ int main(void) {
 	/* Init SLEEP library */
 	SLEEP_Init(NULL, NULL);
 #if (configSLEEP_MODE < 3)
-//	SLEEP_SleepBlockBegin((SLEEP_EnergyMode_t) (configSLEEP_MODE + 1));
 	SLEEP_SleepBlockBegin((SLEEP_EnergyMode_t) (configSLEEP_MODE));
 #endif
 
