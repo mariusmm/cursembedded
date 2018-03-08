@@ -29,6 +29,8 @@ USART_InitAsync_TypeDef usart_cfg = USART_INITASYNC_DEFAULT;
 
 static CircularBuffer_t TX_SerialBuffer,
 RX_SerialBuffer;
+void USART_Send(USART_TypeDef *usart);
+
 
 void USART1_TX_IRQHandler(void) {
 	USART_IntClear( USART1, USART_IEN_TXC);
