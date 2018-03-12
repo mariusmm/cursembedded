@@ -209,13 +209,19 @@ int main(void) {
  * @mainpage FreeRTOS basic queue example
  *
  *
- * This examples uses a queue to send data from two ISRs to a task
+ * This example shows a way to manage serial ports in FreeRTOS.
+ * Each TX and RX ISR for a USART use a FreeRTOS' queue to store what
+ * to send or data received. Asynchronously the queues can be written or read
+ * by user's task.
  *
- * The ISRs are attached to button 0 & 1IRQs and each one sends a different value
- * through the queue
+ * Transmission of data is performed by TX ISR (USART1_TX_IRQHandler) and it
+ * is triggered by sending the first character by a call to the
+ * function USART_Send and it will send the all the data in the queue
+ * (USART_TX_queue) until empty.
  *
- * The task tries to read from the queue, and if it is data, it waits for the received
- * amount of time (delay) to toggle the LED
+ * Reception of the data is managed by the RX ISR (USART1_RX_IRQHandler) and it
+ * stores the received character into the RX queue (USART_RX_queue). IF the queue is full,
+ * the last received character is lost.
  *
  *
  * This project uses the following libraries:
