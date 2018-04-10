@@ -145,10 +145,14 @@ int main(void) {
  */
 
 /**
- * @mainpage FreeRTOS basic semaphore example
+ * @mainpage FreeRTOS ADC & PWM example
  *
+ * Two tasks, connected by a queue.
  *
+ * One task manages the ADC and keeps reading the value in polling mode.
+ * It sends the read value to the other task using the queue.
  *
+ * The other task manages PWM, changing duty-cycle based on received value.
  *
  *
  * This project uses the following libraries:

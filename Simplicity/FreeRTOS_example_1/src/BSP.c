@@ -145,6 +145,7 @@ TIMER_Init_TypeDef timerInit = {
 void PWMConfig(void) {
 	CMU_ClockEnable(cmuClock_TIMER1, true);
 
+	/* Block CPu to sleep in EM2, Timers only work while CPU on EM0 or EM1 */
 	SLEEP_SleepBlockBegin(sleepEM2);
 
 	TIMER_InitCC(TIMER1, 1, &timerCCInit);
@@ -159,8 +160,10 @@ void ADCConfig(void) {
 	ADC_Init_TypeDef init = ADC_INIT_DEFAULT;
 	ADC_InitSingle_TypeDef singleInit = ADC_INITSINGLE_DEFAULT;
 
+	/* Enable clock for ADC peripheral */
 	CMU_ClockEnable(cmuClock_ADC0, true);
 
+	/* Block CPu to sleep in EM2, ADC only works while CPU on EM0 or EM1 */
 	SLEEP_SleepBlockBegin(sleepEM2);
 
 	/* default options are OK */
