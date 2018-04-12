@@ -7,8 +7,8 @@ Llista d'exemples i link al post:
 * [ADC_1](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/ADC_1) - https://sistemesencastats.wordpress.com/2017/09/01/adc/
 * [DMA_1](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/DMA_1) - https://sistemesencastats.wordpress.com/2018/04/10/dma/
 * [DataTypes](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/DataTypes) - https://sistemesencastats.wordpress.com/2017/07/22/tipus-de-dades/
-* [FreeRTOS_2](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/FreeRTOS_2) - ?
-* [FreeRTOS_example_1](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/FreeRTOS_example_1) - ?
+* [FreeRTOS_2](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/FreeRTOS_2) - TBD
+* [FreeRTOS_example_1](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/FreeRTOS_example_1) - TBD
 * [Freertos_UART](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/Freertos_UART) - https://sistemesencastats.wordpress.com/2018/03/08/serie-i-usb-cp2102/
 * [Freertos_blink](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/Freertos_blink) - https://sistemesencastats.wordpress.com/2017/09/04/sistema-operatiu-en-temps-real/
 * [Freertos_queue](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/Freertos_queue) - https://sistemesencastats.wordpress.com/2017/09/06/rtos-cues/
@@ -19,7 +19,7 @@ Llista d'exemples i link al post:
 * [MemoryMap](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/MemoryMap) - https://sistemesencastats.wordpress.com/2017/06/21/es-mapejada-a-memoria/
 * [PWM_1](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/PWM_1) - https://sistemesencastats.wordpress.com/2017/07/08/pwm/
 * [Printf_SWO](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/Printf_SWO) - https://sistemesencastats.wordpress.com/2017/06/20/printf-en-sistemes-encastats/
-* [RTC](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/RTC) - ?
+* [RTC](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/RTC) - TBD
 * [SpeedTest_1](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/SpeedTest_1) - https://sistemesencastats.wordpress.com/2017/07/12/quina-es-la-velocitat-real-del-meu-microcontrolador/
 * [SpeedTest_2](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/SpeedTest_2) - https://sistemesencastats.wordpress.com/2017/07/12/quina-es-la-velocitat-real-del-meu-microcontrolador/
 * [Timer_1	](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/Timer_1) - https://sistemesencastats.wordpress.com/2017/07/12/timers/
