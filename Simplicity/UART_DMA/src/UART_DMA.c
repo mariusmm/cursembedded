@@ -108,9 +108,9 @@ void my_DMA_Init(void) {
 
 	dma_descr.arbRate = dmaArbitrate1;
 	dma_descr.dstInc = dmaDataIncNone;
-	dma_descr.hprot = 0;
-	dma_descr.size = dmaDataSize1;
 	dma_descr.srcInc = dmaDataInc1;
+	dma_descr.size = dmaDataSize1;
+	dma_descr.hprot = 0;
 	DMA_CfgDescr(DMA_USART_TX_CHANNEL, true, &dma_descr);
 }
 
