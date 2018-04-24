@@ -90,7 +90,8 @@ void GPIO_ODD_IRQHandler(void) {
 /**
  * @brief Our first task. A task is always a endless loop
  *
- * @param pParameter Unused parameter
+ * @param pParameter Unused parameter, present due to standard
+ * 			task function prototype in FreeRTOS
  * @return none
  *
  */
