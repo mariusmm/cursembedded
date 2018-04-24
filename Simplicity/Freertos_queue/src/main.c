@@ -68,7 +68,7 @@ void GPIO_EVEN_IRQHandler(void) {
 /**
  * @brief Button 1 ISR
  *
- * Sends the delay time every time button 0 is pushed
+ * Sends the delay time every time button 1 is pushed
  */
 void GPIO_ODD_IRQHandler(void) {
 	uint32_t aux;
@@ -154,12 +154,13 @@ int main(void) {
  * @mainpage FreeRTOS basic queue example
  *
  *
- * This examples uses a queue to send data from two ISRs to a task
+ * This examples uses a queue (@ref queue_buttons) to send data from two ISRs to a task
  *
- * The ISRs are attached to button 0 & 1IRQs and each one sends a different value
+ * The ISRs are attached to button 0 & 1 IRQs (@ref GPIO_EVEN_IRQHandler, @ref GPIO_ODD_IRQHandler)
+ * and each one sends a different value
  * through the queue
  *
- * The task tries to read from the queue, and if it is data, it waits for the received
+ * The task (@ref TaskLedToggle) tries to read from the queue, and if it is data, it waits for the received
  * amount of time (delay) to toggle the LED
  *
  *

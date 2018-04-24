@@ -62,9 +62,9 @@ $(function() {
 <div class="title">FreeRTOS basic queue example </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>This examples uses a queue to send data from two ISRs to a task</p>
-<p>The ISRs are attached to button 0 &amp; 1IRQs and each one sends a different value through the queue</p>
-<p>The task tries to read from the queue, and if it is data, it waits for the received amount of time (delay) to toggle the LED</p>
+<div class="textblock"><p>This examples uses a queue (<a class="el" href="group__main.html#ga00ba7b05ce4d9fd46393c3e635404114">queue_buttons</a>) to send data from two ISRs to a task</p>
+<p>The ISRs are attached to button 0 &amp; 1 IRQs (<a class="el" href="group__main.html#ga87d72653156b83829786f1f856ecbad1">GPIO_EVEN_IRQHandler</a>, <a class="el" href="group__main.html#ga8fff5a798ff4721659dc7bdbb3149c8b">GPIO_ODD_IRQHandler</a>) and each one sends a different value through the queue</p>
+<p>The task (<a class="el" href="group__main.html#ga49bd9149bc12d968eb1fd97988749684">TaskLedToggle</a>) tries to read from the queue, and if it is data, it waits for the received amount of time (delay) to toggle the LED</p>
 <p>This project uses the following libraries: </p><ul>
 <li><a class="el" href="group__BSP.html">BSP</a> </li>
 </ul>
