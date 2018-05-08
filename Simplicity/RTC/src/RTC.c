@@ -63,10 +63,11 @@ int main(void) {
 	rtcInit.comp0Top = true; /* Clear counter on compare match */
 	rtcInit.debugRun = false; /* Counter shall keep running during debug halt. */
 
-	RTC_CompareSet(0, 3);
+	RTC_CompareSet(0, 2);
 
 	/* Enabling Interrupt from RTC */
 	RTC_IntEnable(RTC_IFC_COMP0);
+	NVIC_ClearPendingIRQ(RTC_IRQn);
 	NVIC_EnableIRQ(RTC_IRQn);
 
 	/* Initialize the RTC */
