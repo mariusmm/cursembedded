@@ -123,15 +123,15 @@ int main(void) {
 
 	/* Create read sensor task */
 	xTaskCreate(ReadSensor_task, (const char *) "ReadSensor",
-			configMINIMAL_STACK_SIZE-65, NULL, READ_TASK_PRIORITY, &tasks_handles[0]);
+			configMINIMAL_STACK_SIZE-50, NULL, READ_TASK_PRIORITY, &tasks_handles[0]);
 
 	/* Create print & LED ctrl task */
 	xTaskCreate(MngData_task, (const char *) "MngData",
-			100-5, NULL, MNG_TASK_PRIORITY, &tasks_handles[1]);
+			configMINIMAL_STACK_SIZE, NULL, MNG_TASK_PRIORITY, &tasks_handles[1]);
 
 
 	xTaskCreate(Trace_tasks, (const char*) "TraceTask",
-			configMINIMAL_STACK_SIZE-20, NULL, tskIDLE_PRIORITY, &tasks_handles[2]);
+			configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY, &tasks_handles[2]);
 
 	/* Start FreeRTOS Scheduler */
 	vTaskStartScheduler();
@@ -158,6 +158,7 @@ int main(void) {
  * @li @ref APDS_9960
  * @li @ref I2C_Wrapper
  * @li @ref PWM
+ * @li @ref Trace
  *
  * @}
  */

@@ -11,21 +11,25 @@
 
 #include "TraceUtils.h"
 
+void trace_watermark() {
+	int i;
+
+	for (i = 0; i < MAX_TASKS_TO_TRACE; i++) {
+		printf("Task %s - Watermark: %lu\r\n", pcTaskGetName(tasks_handles[i]),
+				uxTaskGetStackHighWaterMark(tasks_handles[i]));
+	}
+}
+
 void Trace_tasks(void *pParameter) {
 
-	int num_tasks, i;
+	int num_tasks;
 
 	while (1) {
 		vTaskDelay(5000);
 		num_tasks = uxTaskGetNumberOfTasks();
 
 		printf("num of tasks %d\r\n", num_tasks);
-
-		for (i = 0; i < MAX_TASKS_TO_TRACE; i++) {
-			printf("Task %s - Watermark:%lu\r\n",
-					pcTaskGetName(tasks_handles[i]),
-					uxTaskGetStackHighWaterMark(tasks_handles[i]));
-		}
+		trace_watermark();
 	}
 }
 

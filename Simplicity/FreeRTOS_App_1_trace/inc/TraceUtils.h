@@ -28,9 +28,16 @@
 TaskHandle_t tasks_handles[MAX_TASKS_TO_TRACE];
 
 /**
- * Task to get trace information for all task of the system
+ * @brief Prints by the debug console the name
+ * of the tasks and its maximum watermark level
+ */
+void trace_watermark();
+
+/**
+ * @brief Task to get trace information for all task of the system
+ * every 5 seconds
  *
- * @param pParameter
+ * @param pParameter Unused parameter, declared due to FreeRTOS API
  */
 void Trace_tasks(void *pParameter);
 

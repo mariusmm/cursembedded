@@ -70,6 +70,9 @@ $(function() {
 <div class="title">TraceUtils.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Trace utilities for FreeRTOS.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &quot;FreeRTOS.h&quot;</code><br />
 <code>#include &quot;task.h&quot;</code><br />
@@ -77,8 +80,6 @@ $(function() {
 Include dependency graph for TraceUtils.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="TraceUtils_8h__incl.png" border="0" usemap="#TraceUtils_8h" alt=""/></div>
-<map name="TraceUtils_8h" id="TraceUtils_8h">
-</map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
@@ -86,7 +87,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="center"><img src="TraceUtils_8h__dep__incl.png" border="0" usemap="#TraceUtils_8hdep" alt=""/></div>
 <map name="TraceUtils_8hdep" id="TraceUtils_8hdep">
 <area shape="rect" id="node2" href="main_8c.html" title="Basic FreeRTOS application example. " alt="" coords="5,80,67,107"/>
-<area shape="rect" id="node3" href="TraceUtils_8c.html" title="TraceUtils.c" alt="" coords="91,80,184,107"/>
+<area shape="rect" id="node3" href="TraceUtils_8c.html" title="Trace utilities for FreeRTOS. " alt="" coords="91,80,184,107"/>
 </map>
 </div>
 </div>
@@ -94,75 +95,35 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a89f647d8ba75f3ac9fd8bb9698d7227e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TraceUtils_8h.html#a89f647d8ba75f3ac9fd8bb9698d7227e">MAX_TASKS_TO_TRACE</a>&#160;&#160;&#160;3</td></tr>
-<tr class="separator:a89f647d8ba75f3ac9fd8bb9698d7227e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga89f647d8ba75f3ac9fd8bb9698d7227e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Trace.html#ga89f647d8ba75f3ac9fd8bb9698d7227e">MAX_TASKS_TO_TRACE</a>&#160;&#160;&#160;3</td></tr>
+<tr class="memdesc:ga89f647d8ba75f3ac9fd8bb9698d7227e"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of tasks to trace  <a href="group__Trace.html#ga89f647d8ba75f3ac9fd8bb9698d7227e">More...</a><br /></td></tr>
+<tr class="separator:ga89f647d8ba75f3ac9fd8bb9698d7227e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a5f40a5b5451c43f3593f4ff96b0e8988"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TraceUtils_8h.html#a5f40a5b5451c43f3593f4ff96b0e8988">Trace_task</a> (void *pParameter)</td></tr>
-<tr class="separator:a5f40a5b5451c43f3593f4ff96b0e8988"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga83ac91dbf9f5372cb169c84178d2efdc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Trace.html#ga83ac91dbf9f5372cb169c84178d2efdc">trace_watermark</a> ()</td></tr>
+<tr class="memdesc:ga83ac91dbf9f5372cb169c84178d2efdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints by the debug console the name of the tasks and its maximum watermark level.  <a href="group__Trace.html#ga83ac91dbf9f5372cb169c84178d2efdc">More...</a><br /></td></tr>
+<tr class="separator:ga83ac91dbf9f5372cb169c84178d2efdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeb49d84257b9f2a8df812f15633672ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Trace.html#gaeb49d84257b9f2a8df812f15633672ad">Trace_tasks</a> (void *pParameter)</td></tr>
+<tr class="memdesc:gaeb49d84257b9f2a8df812f15633672ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Task to get trace information for all task of the system every 5 seconds.  <a href="group__Trace.html#gaeb49d84257b9f2a8df812f15633672ad">More...</a><br /></td></tr>
+<tr class="separator:gaeb49d84257b9f2a8df812f15633672ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:aa1c611b5c588e062239340e5f3f95740"><td class="memItemLeft" align="right" valign="top">TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TraceUtils_8h.html#aa1c611b5c588e062239340e5f3f95740">tasks_handles</a> [<a class="el" href="TraceUtils_8h.html#a89f647d8ba75f3ac9fd8bb9698d7227e">MAX_TASKS_TO_TRACE</a>]</td></tr>
-<tr class="separator:aa1c611b5c588e062239340e5f3f95740"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa1c611b5c588e062239340e5f3f95740"><td class="memItemLeft" align="right" valign="top">TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Trace.html#gaa1c611b5c588e062239340e5f3f95740">tasks_handles</a> [<a class="el" href="group__Trace.html#ga89f647d8ba75f3ac9fd8bb9698d7227e">MAX_TASKS_TO_TRACE</a>]</td></tr>
+<tr class="memdesc:gaa1c611b5c588e062239340e5f3f95740"><td class="mdescLeft">&#160;</td><td class="mdescRight">array to store the handles to tasks  <a href="group__Trace.html#gaa1c611b5c588e062239340e5f3f95740">More...</a><br /></td></tr>
+<tr class="separator:gaa1c611b5c588e062239340e5f3f95740"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a89f647d8ba75f3ac9fd8bb9698d7227e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a89f647d8ba75f3ac9fd8bb9698d7227e">&#9670;&nbsp;</a></span>MAX_TASKS_TO_TRACE</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Trace utilities for FreeRTOS. </p>
+<dl class="section author"><dt>Author</dt><dd>Màrius Montón <a href="#" onclick="location.href='mai'+'lto:'+'mar'+'iu'+'s.m'+'on'+'ton'+'@g'+'mai'+'l.'+'com'; return false;">mariu<span style="display: none;">.nosp@m.</span>s.mo<span style="display: none;">.nosp@m.</span>nton@<span style="display: none;">.nosp@m.</span>gmai<span style="display: none;">.nosp@m.</span>l.com</a> </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>V1.0 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>25-May-2018 </dd></dl>
+<dl class="section user"><dt>License: This project is released under the GNU Public License.s</dt><dd><hr/>
+</dd></dl>
 
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define MAX_TASKS_TO_TRACE&#160;&#160;&#160;3</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="TraceUtils_8h_source.html#l00015">15</a> of file <a class="el" href="TraceUtils_8h_source.html">TraceUtils.h</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a5f40a5b5451c43f3593f4ff96b0e8988"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5f40a5b5451c43f3593f4ff96b0e8988">&#9670;&nbsp;</a></span>Trace_task()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Trace_task </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>pParameter</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="TraceUtils_8c_source.html#l00014">14</a> of file <a class="el" href="TraceUtils_8c_source.html">TraceUtils.c</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="aa1c611b5c588e062239340e5f3f95740"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa1c611b5c588e062239340e5f3f95740">&#9670;&nbsp;</a></span>tasks_handles</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">TaskHandle_t tasks_handles[<a class="el" href="TraceUtils_8h.html#a89f647d8ba75f3ac9fd8bb9698d7227e">MAX_TASKS_TO_TRACE</a>]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="TraceUtils_8h_source.html#l00017">17</a> of file <a class="el" href="TraceUtils_8h_source.html">TraceUtils.h</a>.</p>
-
-</div>
-</div>
-</div><!-- contents -->
+<p class="definition">Definition in file <a class="el" href="TraceUtils_8h_source.html">TraceUtils.h</a>.</p>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">
