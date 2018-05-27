@@ -1,0 +1,7 @@
+<map id="main.c" name="main.c">
+<area shape="rect" id="node10" href="$BSP_8h.html" title="Basic BSP enabling pritnf. " alt="" coords="797,229,857,256"/>
+<area shape="rect" id="node14" href="$APDS-9960_8h.html" title="APDS&#45;9969 sensor library. " alt="" coords="693,80,796,107"/>
+<area shape="rect" id="node18" href="$PWM_8h.html" title="Basic PWM library. It uses Timer1 routed to TIM1_CC1 #4 PD7 (Led) " alt="" coords="820,80,887,107"/>
+<area shape="rect" id="node20" href="$TraceUtils_8h.html" title="TraceUtils.h" alt="" coords="386,80,479,107"/>
+<area shape="rect" id="node15" href="$I2C__Wrapper_8h.html" title="APDS&#45;9969 library. " alt="" coords="640,155,750,181"/>
+</map>
