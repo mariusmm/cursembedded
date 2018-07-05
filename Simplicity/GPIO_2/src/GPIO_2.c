@@ -23,7 +23,7 @@ void GPIO_EVEN_IRQHandler(void) {
 	GPIO_IntClear(aux);
 
 	/* Set LED off */
-	GPIO_PinOutClear(gpioPortC, 0);
+	GPIO_PinOutClear(gpioPortD, 7);
 }
 
 void GPIO_ODD_IRQHandler(void) {
@@ -35,7 +35,7 @@ void GPIO_ODD_IRQHandler(void) {
 	GPIO_IntClear(aux);
 
 	/* Set LED on */
-	GPIO_PinOutSet(gpioPortC, 0);
+	GPIO_PinOutSet(gpioPortD, 7);
 }
 
 int main(void) {
@@ -44,13 +44,13 @@ int main(void) {
 
 	CMU_ClockEnable(cmuClock_GPIO, true);
 
-	GPIO_PinModeSet(gpioPortC,  0, gpioModePushPullDrive, 0); /* LED */
-	GPIO_PinModeSet(gpioPortB,  9, gpioModeInput, 0); /* Boto 0 */
-	GPIO_PinModeSet(gpioPortB, 10, gpioModeInput, 0); /* Boto 1 */
+	GPIO_PinModeSet(gpioPortD,  7, gpioModePushPullDrive, 0); /* LED */
+	GPIO_PinModeSet(gpioPortD,  8, gpioModeInput, 0); /* Boto 0 */
+	GPIO_PinModeSet(gpioPortB, 11, gpioModeInput, 0); /* Boto 1 */
 
 	/* Set Interrupt configuration for both buttons */
-	GPIO_IntConfig(gpioPortB,  9, false, true, true);
-	GPIO_IntConfig(gpioPortB, 10, false, true, true);
+	GPIO_IntConfig(gpioPortD,  8, false, true, true);
+	GPIO_IntConfig(gpioPortB, 11, false, true, true);
 
 	/* Enable interrupts */
 	NVIC_EnableIRQ(GPIO_EVEN_IRQn);
