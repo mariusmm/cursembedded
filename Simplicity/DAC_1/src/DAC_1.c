@@ -119,7 +119,7 @@ int main(void) {
  * @mainpage DAC Application example
  * This example outputs a constant value using DAC0 channel 1 (PB12 - DAC0_OUT1)
  * The two buttons increments (decrements) output voltage by constant factor
- * Each step is 210 mV (should be 206 mV)
+ * Each step is 205 mV (should be 206 mV)
  * @}
  */
 
