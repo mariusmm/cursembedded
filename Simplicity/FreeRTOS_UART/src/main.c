@@ -89,7 +89,7 @@ void USART_Send(USART_TypeDef *usart) {
  * @return none
  *
  */
-static void UARTTAsk(void *pParameter) {
+static void UARTTask(void *pParameter) {
 
 	(void) pParameter;
 	char recv_char;
@@ -189,7 +189,7 @@ int main(void) {
 		}
 	}
 	/* Create our first task */
-	xTaskCreate(UARTTAsk, (const char *) "UARTTAsk",
+	xTaskCreate(UARTTask, (const char *) "UARTTAsk",
 	configMINIMAL_STACK_SIZE, NULL, TOGGLE_TASK_PRIORITY, NULL);
 
 	/* Send 'A' character */
