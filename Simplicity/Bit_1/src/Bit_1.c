@@ -41,6 +41,12 @@ int main(void)
   my_variable ^= (1 << 0);
   printf("my_variable: 0x%02X\r\n", my_variable);
 
+  // Check if bit 4 is set to '1'
+  if ((my_variable & (1 << 4)) != 0 ) {
+	  printf("Demo was successful!!!\r\n");
+  } else {
+	  printf("Something was wrong (?)\r\n");
+  }
   /* Infinite loop */
   while (1) {
 	;
