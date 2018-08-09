@@ -16,22 +16,14 @@
 #include <ostream>
 #include "UART.h"
 
-UART* helper_uart;
 
-void USART1_TX_IRQHandler() {
-	helper_uart->USART1_TX_IRQHandler();
-}
-
-void USART1_RX_IRQHandler() {
-	helper_uart->USART1_RX_IRQHandler();
-}
 
 int main(void) {
 	/* Chip errata */
 	CHIP_Init();
 
 	UART my_uart(115200, 1, 1, true);
-	helper_uart = &my_uart;
+
 
 #if defined(USE_CHAR_OP) || defined(USE_STRING_OP)
 	my_uart << "Testing" << " C++ string style";

@@ -11,6 +11,10 @@
 
 #include <UART.h>
 
+static UART* helper_uart;
+
+
+
 UART::UART(unsigned long baudrate, unsigned int uart_number,
 		unsigned int location, bool use_irq) {
 
@@ -109,6 +113,8 @@ UART::UART(unsigned long baudrate, unsigned int uart_number,
 	}
 
 	USART_Enable(m_uart, usartEnable);
+
+	helper_uart = this;
 }
 
 UART::~UART() {
@@ -155,3 +161,15 @@ void UART::USART1_RX_IRQHandler(void) {
 	}
 }
 
+
+void USART1_TX_IRQHandler() {
+	if (helper_uart) {
+		helper_uart->USART1_TX_IRQHandler();
+	}
+}
+
+void USART1_RX_IRQHandler() {
+	if (helper_uart) {
+		helper_uart->USART1_RX_IRQHandler();
+	}
+}
