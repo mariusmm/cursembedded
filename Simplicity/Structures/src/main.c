@@ -3,7 +3,7 @@
  * @file    main.c
  * @author  Màrius Montón <marius.monton@gmail.com>
  * @version V1.0
- * @date    05-July-2017
+ * @date    18-October-2018
  * @brief   Use of structures
  * @license This project is released under the GNU Public License.s
  * ******************************************************************************
