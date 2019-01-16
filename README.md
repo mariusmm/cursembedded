@@ -34,6 +34,7 @@ Llista d'exemples i link al post:
 * [I2C_Example_1](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/I2C_Example_1) - https://sistemesencastats.wordpress.com/2018/04/08/el-bus-i2c/
 * [LETIMER_LP](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/LETIMER_LP) - https://sistemesencastats.wordpress.com/2018/08/12/un-timer-de-baix-consum/
 * [MemoryMap](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/MemoryMap) - https://sistemesencastats.wordpress.com/2017/06/21/es-mapejada-a-memoria/
+* [PeriodicTasks](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/PeriodicTasks) - https://sistemesencastats.wordpress.com/2019/01/16/gestor-de-tasques-periodiques-simple/
 * [PWM_1](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/PWM_1) - https://sistemesencastats.wordpress.com/2017/07/08/pwm/
 * [Printf_SWO](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/Printf_SWO) - https://sistemesencastats.wordpress.com/2017/06/20/printf-en-sistemes-encastats/
 * [Printf_float](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/Printf_float) - https://sistemesencastats.wordpress.com/2018/05/02/printant-floats-en-sistemes-encastats/
