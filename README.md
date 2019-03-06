@@ -23,6 +23,7 @@ Llista d'exemples i link al post:
 * [FreeRTOS_App_1](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/FreeRTOS_App_1) - https://sistemesencastats.wordpress.com/2018/05/24/una-aplicacio-completa/
 * [FreeRTOS_App_1_trace](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/FreeRTOS_App_1_trace) - https://sistemesencastats.wordpress.com/2018/05/28/lstack-duna-app-en-freertos/
 * [FreeRTOS_Blink](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/FreeRTOS_Blink) - https://sistemesencastats.wordpress.com/2017/09/04/sistema-operatiu-en-temps-real/
+* [FreeRTOS_Delay](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/FreeRTOS_Delay) - https://sistemesencastats.wordpress.com/2019/03/05/controlant-el-temps-a-les-tasques/
 *  [FreeRTOS_Mutex](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/FreeRTOS_Mutex) - https://sistemesencastats.wordpress.com/2018/05/23/fent-servir-mutex/
 * [FreeRTOS_Queue](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/FreeRTOS_Queue) - https://sistemesencastats.wordpress.com/2017/09/06/rtos-cues/
 * [FreeRTOS_Queue_2](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/FreeRTOS_Queue_2) - https://sistemesencastats.wordpress.com/2018/05/28/enviant-diverses-dades-per-una-cua/
