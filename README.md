@@ -43,7 +43,7 @@ Llista d'exemples i link al post:
 * [SpeedTest_1](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/SpeedTest_1) - https://sistemesencastats.wordpress.com/2017/07/12/quina-es-la-velocitat-real-del-meu-microcontrolador/
 * [SpeedTest_2](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/SpeedTest_2) - https://sistemesencastats.wordpress.com/2017/07/12/quina-es-la-velocitat-real-del-meu-microcontrolador/
 * [Structures](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/Structures) - https://sistemesencastats.wordpress.com/2018/10/18/empaquetant-estructures/
-* [Systick](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/Systick) - TBD
+* [Systick](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/Systick) - https://sistemesencastats.wordpress.com/2019/03/07/gestio-de-rellotges-systick/
 * [Timer_1	](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/Timer_1) - https://sistemesencastats.wordpress.com/2017/07/12/timers/
 * [Timer_2](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/Timer_2) - https://sistemesencastats.wordpress.com/2017/07/12/timer-i-irqs/
 * [UART_1](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/UART_1) - https://sistemesencastats.wordpress.com/2018/03/08/serie-i-usb-cp2102/
