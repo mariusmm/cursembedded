@@ -5,7 +5,7 @@ Curs a http://sistemesencastats.wordpress.com
 Llista d'exemples i link al post:
 
 * [ADC_1](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/ADC_1) - https://sistemesencastats.wordpress.com/2017/09/01/adc/
-* [BIT_1](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/Bit_1) - TBD
+* [BIT_1](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/Bit_1) - https://sistemesencastats.wordpress.com/2019/03/07/manipulant-bits-individuals/
 * [CXX_1](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/CXX_1) - https://sistemesencastats.wordpress.com/2018/09/14/c-vs-c-en-sistemes-encastats/
 * [CXX_2](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/CXX_2) - https://sistemesencastats.wordpress.com/2018/09/14/c-vs-c-en-sistemes-encastats/
 * [CXX_UART](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/CXX_UART) - https://sistemesencastats.wordpress.com/2018/09/14/c-vs-c-en-sistemes-encastats/
