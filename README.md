@@ -15,9 +15,9 @@ Llista d'exemples i link al post:
 * [DataTypes](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/DataTypes) - https://sistemesencastats.wordpress.com/2017/07/22/tipus-de-dades/
 * [ErrorHandling](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/ErrorHandling) - https://sistemesencastats.wordpress.com/2018/07/03/detectant-errors-greus-a-arm/
 * [FLASH_1](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/FLASH_1) - https://github.com/mariusmm/cursembedded/tree/master/Simplicity/FLASH_1
-* [FSM_1](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/FSM_1) - TBD
-* [FSM_2](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/FSM_2) - TBD
-* [FSM:3](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/FSM_3) - TBD
+* [FSM_1](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/FSM_1) - https://sistemesencastats.wordpress.com/2019/04/02/maquines-destats/
+* [FSM_2](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/FSM_2) - https://sistemesencastats.wordpress.com/2019/04/03/codificant-maquines-destats/
+* [FSM:3](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/FSM_3) - https://sistemesencastats.wordpress.com/2019/04/03/temps-i-maquines-destats/
 * [FreeRTOS_1](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/FreeRTOS_1) - TBD
 * [FreeRTOS_2](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/FreeRTOS_2) - TBD
 * [FreeRTOS_App_1](https://github.com/mariusmm/cursembedded/tree/master/Simplicity/FreeRTOS_App_1) - https://sistemesencastats.wordpress.com/2018/05/24/una-aplicacio-completa/
