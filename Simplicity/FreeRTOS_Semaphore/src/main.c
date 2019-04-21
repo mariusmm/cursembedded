@@ -90,6 +90,7 @@ static void TaskLedToggle(void *pParameter) {
 
 	for (;;) {
 		xSemaphoreTake(semaphore_button_0, portMAX_DELAY);
+		TriggerToggle();
 		LedToggle();
 	}
 }

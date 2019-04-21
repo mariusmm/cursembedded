@@ -113,7 +113,7 @@ static void BSP_ButtonsInit() {
 	GPIO_PinModeSet(gpioPortD, 8, gpioModeInput, 0); /* Boto 0 */
 	GPIO_PinModeSet(gpioPortB, 11, gpioModeInput, 0); /* Boto 1 */
 
-	/* Trigger signal on PD7 */
+	/* Trigger signal on PD6 */
 	GPIO_PinModeSet(gpioPortD, 6, gpioModePushPullDrive, 0);
 
 	/* Set Interrupt configuration for both buttons */

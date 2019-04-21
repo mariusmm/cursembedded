@@ -42,6 +42,10 @@ void LedOff(void);
  */
 void LedToggle(void);
 
+void TriggerSet(void);
+void TriggerClear(void);
+void TriggerToggle(void);
+
 #endif /* BSP_H_ */
 
 /**

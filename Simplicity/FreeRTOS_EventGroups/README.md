@@ -1,4 +1,4 @@
-FreeRTOS second example
+FreeRTOS Event Group Notification example
 =======================
 
 This examples uses an Event Group to block a task waiting for two events.

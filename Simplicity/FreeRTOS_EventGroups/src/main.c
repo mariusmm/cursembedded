@@ -94,6 +94,7 @@ static void TaskLedToggle(void *pParameter) {
 
 	while (true) {
 		xEventGroupWaitBits(event_group, (FIRST_BUTTON_BIT | SECOND_BUTTON_BIT), pdTRUE, pdTRUE, portMAX_DELAY);
+		TriggerToggle();
 		LedToggle();
 	}
 }

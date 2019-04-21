@@ -89,6 +89,18 @@ void LedToggle(void) {
 	GPIO_PinOutToggle(gpioPortD, 7);
 }
 
+void TriggerSet(void) {
+	GPIO_PinOutSet(gpioPortD, 6);
+}
+
+void TriggerClear(void) {
+	GPIO_PinOutClear(gpioPortD, 6);
+}
+
+void TriggerToggle(void) {
+	GPIO_PinOutToggle(gpioPortD, 6);
+}
+
 /**
  * @brief Init buttons GPIOs
  *
@@ -98,6 +110,9 @@ static void BSP_ButtonsInit() {
 	CMU_ClockEnable(cmuClock_GPIO, true);
 	GPIO_PinModeSet(gpioPortD, 8, gpioModeInput, 0); /* Boto 0 */
 	GPIO_PinModeSet(gpioPortB, 11, gpioModeInput, 0); /* Boto 1 */
+
+	/* Trigger signal on PD6 */
+	GPIO_PinModeSet(gpioPortD, 6, gpioModePushPullDrive, 0);
 
 	/* Set Interrupt configuration for both buttons */
 	GPIO_IntConfig(gpioPortD, 8, false, true, true);
